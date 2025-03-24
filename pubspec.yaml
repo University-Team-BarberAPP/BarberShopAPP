@@ -1,0 +1,35 @@
+name: barbershop
+
+description: "Sistema de agendamento para corte de cabelo em barbearias, focado em beleza e masculinidade."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.6.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_maps_flutter: ^2.5.0
+  url_launcher: ^6.1.6
+  cupertino_icons: ^1.0.8
+  provider: ^6.0.5
+  shared_preferences: ^2.2.2
+  intl: ^0.19.0
+  flutter_svg: ^2.0.9
+  fl_chart: ^0.64.0
+  http: ^1.2.1
+  jwt_decoder: ^2.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/barber.png

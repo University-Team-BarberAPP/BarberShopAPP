@@ -1,0 +1,130 @@
+### Variáveis
+@baseUrl = http://localhost:3000/api
+@authToken = SEU_TOKEN_JWT_AQUI
+
+### Teste de servidor
+GET http://localhost:3000/
+
+### Autenticação
+
+# Registrar um novo usuário
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+  "name": "Usuário Teste",
+  "email": "usuario@teste.com",
+  "password": "senha123"
+}
+
+### Login
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "usuario@teste.com",
+  "password": "senha123"
+}
+
+### Obter perfil do usuário
+GET {{baseUrl}}/auth/profile
+Authorization: Bearer {{authToken}}
+
+### Atualizar perfil do usuário
+PUT {{baseUrl}}/auth/profile
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "name": "Usuário Atualizado",
+  "email": "usuario@teste.com"
+}
+
+### Atualizar senha
+PUT {{baseUrl}}/auth/password
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "currentPassword": "senha123",
+  "newPassword": "novaSenha123"
+}
+
+### Registros de Atendimento
+
+# Criar nova entrada de atendimento
+POST {{baseUrl}}/service-entries
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "date": "2023-03-17T12:00:00Z",
+  "serviceQuality": "Serviço Excelente",
+  "serviceScore": 5,
+  "note": "Corte impecável, atendimento excelente!",
+  "services": ["Corte de cabelo", "Barba", "Hidratação"]
+}
+
+### Listar entradas de atendimento
+GET {{baseUrl}}/service-entries
+Authorization: Bearer {{authToken}}
+
+### Listar entradas com filtros
+GET {{baseUrl}}/service-entries?limit=10&offset=0&startDate=2023-01-01&endDate=2023-12-31
+Authorization: Bearer {{authToken}}
+
+### Obter uma entrada específica
+GET {{baseUrl}}/service-entries/1
+Authorization: Bearer {{authToken}}
+
+### Atualizar uma entrada
+PUT {{baseUrl}}/service-entries/1
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "date": "2023-03-17T12:00:00Z",
+  "serviceQuality": "Muito Bom",
+  "serviceScore": 4,
+  "note": "Ótimo corte, mas demorou um pouco.",
+  "services": ["Corte de cabelo", "Barba"]
+}
+
+### Excluir uma entrada
+DELETE {{baseUrl}}/service-entries/1
+Authorization: Bearer {{authToken}}
+
+### Obter estatísticas
+GET {{baseUrl}}/service-entries/stats?period=month
+Authorization: Bearer {{authToken}}
+
+### Serviços
+
+# Listar todos os serviços disponíveis
+GET {{baseUrl}}/services
+
+### Listar serviços mais comuns dos clientes
+GET {{baseUrl}}/services/user/common
+Authorization: Bearer {{authToken}}
+
+### Criar um novo serviço
+POST {{baseUrl}}/services
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "name": "Alisamento"
+}
+
+### Atualizar um serviço
+PUT {{baseUrl}}/services/11
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "name": "Alisamento e Hidratação"
+}
+
+### Excluir um serviço
+DELETE {{baseUrl}}/services/11
+Authorization: Bearer {{authToken}}
