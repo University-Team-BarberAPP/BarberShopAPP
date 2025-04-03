@@ -46,6 +46,14 @@ O aplicativo utiliza uma paleta de cores cuidadosamente selecionada para transmi
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests com melhorias.
 
+## Equipe
+
+1. Renan
+2. Núbia
+3. Isabella
+4. Juliana
+5. Giander
+
 ## Licença
 
 Este projeto está licenciado sob a licença MIT.

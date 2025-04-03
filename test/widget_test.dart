@@ -6,7 +6,7 @@ import 'package:barbershop/main.dart'; // Certifique-se de importar corretamente
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Construa o aplicativo e gere um frame.
-    await tester.pumpWidget(const MyApp()); // Alterado para BarbershopApp
+    await tester.pumpWidget(const MyApp());
 
     // Verifique se o contador começa em 0.
     // expect(find.text('0'), findsOneWidget);

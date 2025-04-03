@@ -304,9 +304,9 @@ class _LoginScreenState extends State<LoginScreen> {
                               onPressed: _isLoading ? null : _authenticate,
                               style: ElevatedButton.styleFrom(
                                 padding:
-                                    const EdgeInsets.symmetric(vertical: 12),
+                                    const EdgeInsets.symmetric(vertical: 15),
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8),
+                                  borderRadius: BorderRadius.circular(6),
                                 ),
                               ),
                               child: _isLoading
