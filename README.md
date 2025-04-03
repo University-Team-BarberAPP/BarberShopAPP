@@ -48,11 +48,11 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar
 
 ## Equipe
 
-1. Renan
-2. Núbia
-3. Isabella
-4. Juliana
-5. Giander
+Isabella Donizetti Dardi - RA 24002132
+Giander de Freitas Carvalho Junior - RA 1012022201131
+Juliana Gomes da Silva - RA 1012023200178
+Núbia Ferreira de Oliveira - RA 1012022201260
+Renan Flora dos Santos - RA 1012022100571
 
 ## Licença
 
